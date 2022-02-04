@@ -1,6 +1,6 @@
-import { db } from "../firebaseconfig";
+import { db } from "../firebaseConfig";
 
-export const addName ={
+export const feedbackDetails ={
     add,
 }
 

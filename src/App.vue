@@ -1,7 +1,9 @@
 <template>
-  <main>
-    <HelloWorld/>
-  </main>
+  <v-app>
+    <main>
+      <HelloWorld/>
+    </main>
+  </v-app>
 </template>
 
 <script>

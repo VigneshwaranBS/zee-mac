@@ -1,1 +1,1 @@
-export{addName} from "./addName"
+export{feedbackDetails} from "./addName";
