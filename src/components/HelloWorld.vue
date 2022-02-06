@@ -1,6 +1,6 @@
 <template>
   <main>
-   <v-form @submit.prevent="feedback">
+   <v-form>
      <v-card justify-center width="500"  class="pa-4 ma-16 ">
        <h2>Feedback Form</h2>
         <v-text-field
@@ -28,7 +28,7 @@
           label="Remark"
           v-model="remark"
         ></v-textarea>
-        <v-btn outlined class="primary white--text">Submit</v-btn>
+        <v-btn outlined class="primary white--text"  @click="add">Submit</v-btn>
      </v-card>
    </v-form>
   </main>
@@ -37,9 +37,7 @@
 <script>
 import {feedbackDetails} from "../services"
 export default {
-    created() {
-    this.init();
-  },
+    
   name: "HelloWorld",
  data:()=>({
    name:null,
@@ -49,7 +47,7 @@ export default {
    remark:null,
  }),
  methods:{
-   async feedback(){
+   async add(){
      if(
        this.name==null||
        this.dept==null||
@@ -73,7 +71,7 @@ export default {
       .add(data)
       .then(()=>{
         alert("added");
-         this.name=null;
+      this.name=null;
        this.dept=null;
        this.clgname=null;
        this.year=null;
