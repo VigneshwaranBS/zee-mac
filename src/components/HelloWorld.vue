@@ -14,7 +14,7 @@
             outlined
           ></v-text-field>
            <v-text-field
-            v-model="clgname"
+            v-model="collegename"
             label="College Name"
             outlined
           ></v-text-field>
@@ -28,7 +28,7 @@
           label="Remark"
           v-model="remark"
         ></v-textarea>
-        <v-btn outlined class="primary white--text"  @click="add">Submit</v-btn>
+        <v-btn outlined class="primary white--text"  @click="addData">Submit</v-btn>
      </v-card>
    </v-form>
   </main>
@@ -42,16 +42,16 @@ export default {
  data:()=>({
    name:null,
    dept:null,
-   clgname:null,
+   collegename:null,
    year:null,
    remark:null,
  }),
  methods:{
-   async add(){
+   async addData(){
      if(
        this.name==null||
        this.dept==null||
-       this.clgname==null||
+       this.collegename==null||
        this.year==null||
        this.remark==null
      ){
@@ -62,7 +62,7 @@ export default {
        const data={
          name:this.name,
         dept: this.dept,
-        clgname:this.clgname,
+        collegename:this.collegename,
         year:this.year,
         remark:this.remark,
 
@@ -73,7 +73,7 @@ export default {
         alert("added");
       this.name=null;
        this.dept=null;
-       this.clgname=null;
+       this.collegename=null;
        this.year=null;
        this.remark=null;
       })
